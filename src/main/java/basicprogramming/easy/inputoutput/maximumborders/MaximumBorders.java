@@ -1,4 +1,4 @@
-package basicprogramming.inputoutput.maximumborders;
+package basicprogramming.easy.inputoutput.maximumborders;
 
 import java.util.*;
 

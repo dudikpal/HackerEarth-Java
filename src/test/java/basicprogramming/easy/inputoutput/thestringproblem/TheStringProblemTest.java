@@ -1,4 +1,4 @@
-package basicprogramming.inputoutput.thestringproblem;
+package basicprogramming.easy.inputoutput.thestringproblem;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
