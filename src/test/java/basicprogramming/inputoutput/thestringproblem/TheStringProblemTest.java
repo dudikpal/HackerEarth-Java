@@ -1,8 +1,7 @@
-package basicprogramming.inputoutput;
+package basicprogramming.inputoutput.thestringproblem;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class TheStringProblemTest {
 
@@ -19,7 +18,7 @@ class TheStringProblemTest {
                 lovely string
                 lovely string""";
 
-        assertEquals(expected, new TheStringProblem().solution(input));
+        Assertions.assertEquals(expected, new TheStringProblem().solution(input));
     }
 
 }

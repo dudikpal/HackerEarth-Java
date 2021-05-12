@@ -1,4 +1,4 @@
-package basicprogramming.inputoutput;
+package basicprogramming.inputoutput.thestringproblem;
 
 public class TheStringProblem {
 
