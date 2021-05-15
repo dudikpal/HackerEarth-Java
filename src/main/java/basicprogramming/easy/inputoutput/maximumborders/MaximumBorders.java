@@ -76,6 +76,7 @@ public class MaximumBorders {
         }
         int leftShapeCounter = 1;
         int rightShapeCounter = 1;
+        int verticalMaxLength = 1;
         for (int i = 0; i < shapes.size() - 1; i++) {
             if (shapes.get(i).get(0) == shapes.get(i + 1).get(0)) {
                 leftShapeCounter++;
@@ -87,9 +88,14 @@ public class MaximumBorders {
             } else {
                 rightShapeCounter = 1;
             }
+            if (leftShapeCounter > verticalMaxLength) {
+                verticalMaxLength = leftShapeCounter;
+            }
+            if (rightShapeCounter > verticalMaxLength) {
+                verticalMaxLength = rightShapeCounter;
+            }
         }
-        leftShapeCounter = Math.max(rightShapeCounter, leftShapeCounter);
 
-        return Math.max(maxLength, leftShapeCounter);
+        return Math.max(maxLength, verticalMaxLength);
     }
 }

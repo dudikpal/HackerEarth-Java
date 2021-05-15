@@ -164,7 +164,7 @@ class MaximumBordersTest {
     void testFromFile() {
         String input = "";
         try {
-            input = Files.readString(Path.of("src/main/resources/basicprogramming/inputoutput/maximumborders/input.txt"));
+            input = Files.readString(Path.of("src/main/resources/basicprogramming/easy/inputoutput/maximumborders/input.txt"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -188,7 +188,7 @@ class MaximumBordersTest {
     void testFromFile2() {
         String input = "";
         try {
-            input = Files.readString(Path.of("src/main/resources/basicprogramming/inputoutput/maximumborders/input2.txt"));
+            input = Files.readString(Path.of("src/main/resources/basicprogramming/easy/inputoutput/maximumborders/input2.txt"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -203,7 +203,7 @@ class MaximumBordersTest {
     void testFromFile3() {
         String input = "";
         try {
-            input = Files.readString(Path.of("src/main/resources/basicprogramming/inputoutput/maximumborders/input3.txt"));
+            input = Files.readString(Path.of("src/main/resources/basicprogramming/easy/inputoutput/maximumborders/input3.txt"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -211,6 +211,36 @@ class MaximumBordersTest {
         String expected = """
                 326""";
 
+        assertEquals(expected, new MaximumBorders().solution(input));
+    }
+
+    @Test
+    void testVerticalBorder() {
+        String input = """
+                1
+                5 5
+                .#...
+                .###.
+                .##..
+                .####
+                .##..""";
+        String expected = "5";
+        assertEquals(expected, new MaximumBorders().solution(input));
+    }
+
+    @Test
+    void testVertical2() {
+        String input = """
+                1
+                7 9
+                ####.....
+                #######..
+                ####.....
+                #........
+                ###......
+                ##.......
+                .###.....""";
+        String expected = "6";
         assertEquals(expected, new MaximumBorders().solution(input));
     }
 
